@@ -1,0 +1,229 @@
+
+Troll_Front-Walking-Left.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Troll_Front-Walking-Left_0
+  rotate: false
+  xy: 2, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_30
+  rotate: false
+  xy: 2, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_1
+  rotate: false
+  xy: 152, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_2
+  rotate: false
+  xy: 302, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_3
+  rotate: false
+  xy: 452, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_4
+  rotate: false
+  xy: 602, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_5
+  rotate: false
+  xy: 752, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_6
+  rotate: false
+  xy: 2, 232
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_7
+  rotate: false
+  xy: 152, 232
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_8
+  rotate: false
+  xy: 302, 232
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_9
+  rotate: false
+  xy: 452, 232
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_10
+  rotate: false
+  xy: 602, 232
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_11
+  rotate: false
+  xy: 752, 232
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_12
+  rotate: false
+  xy: 2, 462
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_13
+  rotate: false
+  xy: 152, 462
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_14
+  rotate: false
+  xy: 302, 462
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_15
+  rotate: false
+  xy: 452, 462
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_16
+  rotate: false
+  xy: 602, 462
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_17
+  rotate: false
+  xy: 752, 462
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_18
+  rotate: false
+  xy: 2, 692
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_19
+  rotate: false
+  xy: 152, 692
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_20
+  rotate: false
+  xy: 302, 692
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_21
+  rotate: false
+  xy: 452, 692
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_22
+  rotate: false
+  xy: 602, 692
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_23
+  rotate: false
+  xy: 752, 692
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+
+Troll_Front-Walking-Left2.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Troll_Front-Walking-Left_24
+  rotate: false
+  xy: 2, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_25
+  rotate: false
+  xy: 152, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_26
+  rotate: false
+  xy: 302, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_27
+  rotate: false
+  xy: 452, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_28
+  rotate: false
+  xy: 602, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
+Troll_Front-Walking-Left_29
+  rotate: false
+  xy: 752, 2
+  size: 148, 228
+  orig: 148, 228
+  offset: 0, 0
+  index: -1
