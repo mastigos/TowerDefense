@@ -29,9 +29,8 @@ class Enemy(pygame.sprite.Sprite):
 
             # move enemy
             self.rect.x -= self.speed
-            print(self.sprite)
             self.update_animation()
-            image_surface = pygame.image.load(self.sprite).convert_alpha()
+            image_surface = pygame.image.load('KnightWalking/Knight-and-Horse_Front-Walking-Front_1.png').convert_alpha()
             # draw img
             pygame.draw.rect(surface, (255, 255, 255), self.rect, 1)
             surface.blit(image_surface, self.rect)
@@ -79,7 +78,7 @@ class Enemy(pygame.sprite.Sprite):
 # Enemies
 class Knight(Enemy):
     def __init__(self):
-        super().__init__(health=10, damage=5, resistances=[], special="none", animation_list = ['KnightWalking/Knight-and-Horse_Front-Walking-Front_1.png'],   speed=3, corpseValue=5)
+        super().__init__(health=10, damage=5, resistances=[], special="none", animation_list = ["KnightWalking/Knight-and-Horse_Front-Walking-Front_1.png"],   speed=3, corpseValue=5)
 
 class BatteringRam(Enemy):
     def __init__(self):
