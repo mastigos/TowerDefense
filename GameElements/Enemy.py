@@ -1,16 +1,54 @@
 import pygame
+import spritesheet
+from pygame.examples.cursors import image
 
-class Enemy:
-    def __init__(self, health, damage, resistances, special, speed, corpseValue, start_x=0, start_y=300):
+
+class Enemy(pygame.sprite.Sprite):
+    def __init__(self, health, damage, resistances, special, speed, corpseValue, animation_list, start_x=0, start_y=300):
+        pygame.sprite.Sprite.__init__(self)
         self.health = health
         self.damage = damage
         self.resistances = resistances
         self.special = special
+        self.animation_list = animation_list
         self.speed = speed
         self.corpseValue = corpseValue
         self.x = start_x
         self.y = start_y
         self.current_waypoint = 0  # waypoint index
+        self.frame_index = 0
+        self.action = 0
+        self.update_time = pygame.time.get_ticks()
+
+        # starting img
+        self.sprite = self.animation_list[self.action][self.frame_index]
+        self.rect = pygame.Rect(0, 0, 70, 105)
+        self.rect.center = (self.x, self.y)
+
+    def update(self, surface, target):
+
+            # move enemy
+            self.rect.x -= self.speed
+            print(self.sprite)
+            self.update_animation()
+            image_surface = pygame.image.load(self.sprite).convert_alpha()
+            # draw img
+            pygame.draw.rect(surface, (255, 255, 255), self.rect, 1)
+            surface.blit(image_surface, self.rect)
+
+    def update_animation(self):
+        #animation cooldown
+        ANIMATION_COOLDOWN = 50
+        #update img based on current action
+        self.sprite = self.animation_list[self.action][self.frame_index]
+
+        #check time between frames
+        if pygame.time.get_ticks() - self.update_time > ANIMATION_COOLDOWN:
+            self.update_time = pygame.time.get_ticks()
+            self.frame_index += 1
+        #loop through image index
+        if self.frame_index >= len(self.animation_list[self.action]):
+            self.frame_index = 0
 
     def move(self, waypoints):
 
@@ -41,7 +79,7 @@ class Enemy:
 # Enemies
 class Knight(Enemy):
     def __init__(self):
-        super().__init__(health=10, damage=5, resistances=[], special="none", speed=3, corpseValue=5)
+        super().__init__(health=10, damage=5, resistances=[], special="none", animation_list = ['KnightWalking/Knight-and-Horse_Front-Walking-Front_1.png'],   speed=3, corpseValue=5)
 
 class BatteringRam(Enemy):
     def __init__(self):
