@@ -82,24 +82,47 @@ class Knight(Enemy):
 
 class BatteringRam(Enemy):
     def __init__(self):
-        super().__init__(health=25, maxHealth=25, damage=40, resistances=[], special="none", speed=1.5, corpseValue=20)
+        super().__init__(health=25, damage=40, resistances=[], special="none", speed=1.5, corpseValue=20)
+        frame_paths = [
 
-class Cavalry(Enemy):
+        ]
+
+        self.load_animation_frames(frame_paths)
+
+class Soldier(Enemy):
     def __init__(self):
-        super().__init__(health=20, maxHealth=20, damage=15, resistances=[], special="none", speed=2, corpseValue=15)
+        super().__init__(health=5, damage=10, resistances=[], special="none", speed=1, corpseValue=3)
+        frame_paths = [
+            "Dwarf_Front-Walking-Left_0.png",
+            "Dwarf_Front-Walking-Left_1.png",
+            "Dwarf_Front-Walking-Left_2.png",
+            "Dwarf_Front-Walking-Left_3.png",
+            "Dwarf_Front-Walking-Left_4.png",
+            "Dwarf_Front-Walking-Left_5.png",
+            "Dwarf_Front-Walking-Left_6.png",
+            "Dwarf_Front-Walking-Left_7.png",
+        ]
 
-class Archer(Enemy):
-    def __init__(self):
-        super().__init__(health=5, maxHealth=5, damage=10, resistances=[], special="none", speed=1, corpseValue=3)
+        self.load_animation_frames(frame_paths)
 
-class BannerCarrier(Enemy):
-    def __init__(self):
-        super().__init__(health=10, maxHealth=10, damage=0, resistances=[], special="banner", speed=1.5, corpseValue=7)
-
+#bosses--> last thing
 class Dragon(Enemy):
     def __init__(self):
-        super().__init__(health=500, maxHealth=500, damage=50, resistances=[], special="firebreath", speed=1, corpseValue=150)
+        super().__init__(health=300, damage=50, resistances=[], special="none", speed=1, corpseValue=150)
+        frame_paths = [
+            "Red Dragon_Front-Flying-Left_0.png",
+            "Red Dragon_Front-Flying-Left_1.png",
+            "Red Dragon_Front-Flying-Left_2.png",
+            "Red Dragon_Front-Flying-Left_3.png",
+            "Red Dragon_Front-Flying-Left_4.png",
+            "Red Dragon_Front-Flying-Left_5.png",
+            "Red Dragon_Front-Flying-Left_6.png",
+            "Red Dragon_Front-Flying-Left_7.png"
+        ]
+
+        self.load_animation_frames(frame_paths)
+
 
 class Giant(Enemy):
     def __init__(self):
-        super().__init__(health=1000, maxHealth=500, damage=75, resistances=[], special="stomp", speed=0.5, corpseValue=150)
+        super().__init__(health=1000, damage=75, resistances=[], special="stomp", speed=0.5, corpseValue=150)
