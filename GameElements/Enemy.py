@@ -12,27 +12,41 @@ class Enemy:
         self.x = start_x
         self.y = start_y
         self.current_waypoint = 0
+        self.animation_index = 0
+        self.animation_frames = []
+        self.animation_speed = 0.1
+
+    def load_animation_frames(self, frame_paths):
+        self.animation_frames = [pygame.image.load(path).convert_alpha() for path in frame_paths]
+
+    def update_animation(self):
+        self.animation_index += self.animation_speed
+        if self.animation_index >= len(self.animation_frames):
+            self.animation_index = 0
+
+    def draw(self, screen):
+        if self.animation_frames:
+            frame = self.animation_frames[int(self.animation_index)]
+            screen.blit(frame, (self.x - frame.get_width() // 2, self.y - frame.get_height() // 2))
+        else:
+            pygame.draw.circle(screen, (0, 0, 255), (int(self.x), int(self.y)), 10)
 
     def draw_health_bar(self, screen):
         bar_width = 40
         bar_height = 5
-        # Background
         pygame.draw.rect(screen, (0, 0, 0), (self.x - bar_width // 2, self.y - 15, bar_width, bar_height))
-        # Current health
-        health_ratio = max(self.health / self.maxHealth, 0)  # Ensure it doesn't go below 0
+        health_ratio = max(self.health / self.maxHealth, 0)
         health_width = health_ratio * bar_width
         pygame.draw.rect(screen, (255, 0, 0), (self.x - bar_width // 2, self.y - 15, health_width, bar_height))
 
     def take_damage(self, damage):
         self.health -= damage
-        print(f"Enemy at ({self.x}, {self.y}) took {damage} damage. Remaining health: {self.health}")
         if self.health <= 0:
             self.die()
 
     def die(self):
         print(f"Enemy at ({self.x}, {self.y}) has died.")
         return True
-
 
     def move(self, waypoints):
         if self.current_waypoint < len(waypoints):
@@ -45,12 +59,11 @@ class Enemy:
             if (self.x, self.y) == (target_x, target_y):
                 self.current_waypoint += 1
 
-    def draw(self, screen):
-        pygame.draw.circle(screen, (0, 0, 255), (int(self.x), int(self.y)), 10)  # Blue circle for Knight
-
 class Knight(Enemy):
     def __init__(self):
         super().__init__(health=10, maxHealth=10, damage=5, resistances=[], special="none", speed=1, corpseValue=5)
+        frame_paths = ["GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back.png", "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back2.png", "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back3.png", "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back4.png"]
+        self.load_animation_frames(frame_paths)
 
 class BatteringRam(Enemy):
     def __init__(self):
