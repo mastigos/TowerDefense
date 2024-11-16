@@ -82,24 +82,24 @@ class Knight(Enemy):
 
 class BatteringRam(Enemy):
     def __init__(self):
-        super().__init__(health=25, damage=40, resistances=[], special="none", speed=1.5, corpseValue=20)
+        super().__init__(health=25, maxHealth=10, damage=40, resistances=[], special="none", speed=1.5, corpseValue=20)
 
 class Cavalry(Enemy):
     def __init__(self):
-        super().__init__(health=20, damage=15, resistances=[], special="none", speed=2, corpseValue=15)
+        super().__init__(health=20, maxHealth=20, damage=15, resistances=[], special="none", speed=2, corpseValue=15)
 
 class Archer(Enemy):
     def __init__(self):
-        super().__init__(health=5, damage=10, resistances=[], special="none", speed=1, corpseValue=3)
+        super().__init__(health=5, maxHealth=5, damage=10, resistances=[], special="none", speed=1, corpseValue=3)
 
 class BannerCarrier(Enemy):
     def __init__(self):
-        super().__init__(health=10, damage=0, resistances=[], special="banner", speed=1.5, corpseValue=7)
+        super().__init__(health=10, maxHealth=10, damage=0, resistances=[], special="banner", speed=1.5, corpseValue=7)
 
 class Dragon(Enemy):
     def __init__(self):
-        super().__init__(health=500, damage=50, resistances=[], special="firebreath", speed=1, corpseValue=150)
+        super().__init__(health=500, maxHealth=500, damage=50, resistances=[], special="firebreath", speed=1, corpseValue=150)
 
 class Giant(Enemy):
     def __init__(self):
-        super().__init__(health=1000, damage=75, resistances=[], special="stomp", speed=0.5, corpseValue=150)
+        super().__init__(health=1000, maxHealth=500, damage=75, resistances=[], special="stomp", speed=0.5, corpseValue=150)
