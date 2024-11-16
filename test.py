@@ -46,17 +46,42 @@ class Castle:
         self.x = WIDTH - self.width - (WIDTH % blockSize) - (5 * blockSize)
         self.y = ((HEIGHT // 2) // blockSize) * blockSize  # Snap to grid
 
+        self.original_image = pygame.image.load("GameSprites/Castle/Castle.png").convert_alpha()
+        self.resized_image = pygame.transform.scale(self.original_image, (200, 200))
+        self.image = pygame.transform.flip(self.resized_image, True, False)
+        self.image_rect = self.image.get_rect(center=(self.x + self.width // 2, self.y + self.height // 2))
+
     def draw(self):
         # Castle
-        pygame.draw.rect(screen, GRAY, (self.x, self.y, self.width, self.height))
+        screen.blit(self.image, self.image_rect.topleft)
         # Health bar
         pygame.draw.rect(screen, RED, (self.x, self.y - 20, (self.health / 100) * self.width, 10))
         # Shield bar
         pygame.draw.rect(screen, GREEN, (self.x, self.y - 35, (self.shield / 50) * self.width, 10))
 
-def drawPath(waypoints):
+
+def drawPath(screen, waypoints, path_image, block_size):
     for i in range(len(waypoints) - 1):
-        pygame.draw.line(screen, BROWN, waypoints[i], waypoints[i + 1], 5)
+        start_x, start_y = waypoints[i]
+        end_x, end_y = waypoints[i + 1]
+
+        x, y = start_x, start_y
+
+        while (x, y) != (end_x, end_y):
+            screen.blit(path_image, (x, y))
+
+            if x < end_x:
+                x += block_size
+            elif x > end_x:
+                x -= block_size
+
+            if y < end_y:
+                y += block_size
+            elif y > end_y:
+                y -= block_size
+
+        # Place final tile
+        screen.blit(path_image, (end_x, end_y))
 
 def display_build_ui(player_gold):
 
@@ -192,7 +217,7 @@ def game_loop():
             draw_ui(screen, ui_mouse_x, ui_mouse_y)
 
         castle.draw()
-        drawPath(waypoints)
+
 
 
         if pygame.time.get_ticks() % 5000 < 50:
