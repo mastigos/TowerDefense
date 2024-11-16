@@ -14,10 +14,14 @@ class Enemy:
         self.current_waypoint = 0
         self.animation_index = 0
         self.animation_frames = []
-        self.animation_speed = 0.1
+        self.animation_speed = .25
 
-    def load_animation_frames(self, frame_paths):
-        self.animation_frames = [pygame.image.load(path).convert_alpha() for path in frame_paths]
+    def load_animation_frames(self, frame_paths, ):
+        self.animation_frames = []
+        for path in frame_paths:
+            frame = pygame.image.load(path).convert_alpha()
+            frame = pygame.transform.scale(frame, (50, 50))
+            self.animation_frames.append(frame)
 
     def update_animation(self):
         self.animation_index += self.animation_speed
@@ -62,8 +66,19 @@ class Enemy:
 class Knight(Enemy):
     def __init__(self):
         super().__init__(health=10, maxHealth=10, damage=5, resistances=[], special="none", speed=1, corpseValue=5)
-        frame_paths = ["GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back.png", "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back2.png", "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back3.png", "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back4.png"]
+        frame_paths = [
+            "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back.png",
+            "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back2.png",
+            "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back3.png",
+            "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back4.png",
+            "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back5.png",
+            "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back6.png",
+            "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back7.png",
+            "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back8.png"
+        ]
+
         self.load_animation_frames(frame_paths)
+
 
 class BatteringRam(Enemy):
     def __init__(self):

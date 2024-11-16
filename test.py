@@ -206,7 +206,10 @@ def game_loop():
 
 
             if castle.x <= enemy.x <= castle.x + castle.width and castle.y <= enemy.y <= castle.y + castle.height:
-                castle.health -= enemy.damage
+                if castle.shield > 0:
+                    castle.shield -= enemy.damage
+                else:
+                    castle.health -= enemy.damage
                 enemies.remove(enemy)
 
 
