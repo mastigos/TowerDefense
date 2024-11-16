@@ -1,5 +1,5 @@
 import pygame
-from GameElements.Enemy import Knight
+from GameElements.Enemy import Knight, Soldier, Dragon
 from GameElements.Map import Map
 from GameElements.Tower import Cannon, Catapult, Ballista, CaltropsDispenser, KnightsBarracks, HolyChapel
 
@@ -13,6 +13,9 @@ pygame.display.set_caption("Tower Defense")
 # Game clock
 clock = pygame.time.Clock()
 FPS = 30
+
+background = pygame.image.load("GameSprites/background.png")
+bg = pygame.transform.scale(background, (WIDTH, HEIGHT))
 
 # Colors
 DARK_GREEN = (34, 139, 34)
@@ -32,7 +35,22 @@ def drawGrid():
     for x in range(0, WIDTH, blockSize):
         for y in range(0, HEIGHT, blockSize):
             rect = pygame.Rect(x, y, blockSize, blockSize)
-            pygame.draw.rect(screen, GRAY, rect, 1)
+            pygame.draw.rect(screen, BROWN, rect, 1)
+
+class Background:
+    def __init__(self):
+        screen.blit(bg, (0, 0))
+
+        self.x = WIDTH - screen.get_width()
+        self.y = HEIGHT - screen.get_height()  # Snap to grid
+
+        self.original_image = pygame.image.load("GameSprites/background.png").convert_alpha()
+        self.resized_image = pygame.transform.scale(self.original_image, (self.x, self.y))
+
+
+    def draw(self):
+        # background
+        screen.blit(background, (0, 0))
 
 # Castle
 class Castle:
@@ -60,12 +78,14 @@ class Castle:
         pygame.draw.rect(screen, GREEN, (self.x, self.y - 35, (self.shield / 50) * self.width, 10))
 
 
-def drawPath(screen, waypoints, path_image, block_size):
+def drawPath(screen, waypoints, block_size):
     for i in range(len(waypoints) - 1):
         start_x, start_y = waypoints[i]
         end_x, end_y = waypoints[i + 1]
 
         x, y = start_x, start_y
+        path_image = pygame.image.load("GameSprites/pathTile80x80.png").convert_alpha()
+        path_image = pygame.transform.scale(path_image, (30, 30))
 
         while (x, y) != (end_x, end_y):
             screen.blit(path_image, (x, y))
@@ -148,9 +168,34 @@ def draw_ui(screen, mouse_x, mouse_y):
     font_render = font.render("Ballista", True, (0, 0, 0))
     screen.blit(font_render, (tower_ui_x + 70, tower_ui_y + 75))
 
+def wave_table(waves, enemy):
+    castle = Castle
+    waypoints = [
+        (0, 300), (200, 300), (200, 100), (400, 100), (400, 500),
+        (castle.x + castle.width // 2, 500),
+        (castle.x + castle.width // 2, castle.y + castle.height)
+    ]
+    knight = Knight
+    soldier = Soldier
+    dragon = Dragon
+    waves = {
+        1: [knight, knight, soldier, soldier, knight, knight, knight, knight, soldier, soldier, soldier, dragon],
+        2: [knight, knight, soldier, soldier, knight, knight, knight, knight, soldier, soldier, soldier, dragon, dragon, knight, knight, soldier, soldier, knight, knight, knight, knight, soldier, soldier, soldier, dragon, dragon],
+        3: [knight, knight, soldier, soldier, knight, knight, knight, knight, soldier, soldier, soldier, dragon, dragon, dragon, knight, knight, soldier, soldier, knight, knight, knight, knight, soldier, soldier, soldier, dragon, dragon, dragon, knight, knight, soldier, soldier, knight, knight, knight, knight, soldier, soldier, soldier, dragon, dragon, dragon, dragon]
+     }
+
+    for enemy in waves.values():
+        new_enemy = enemy
+        enemy.append(new_enemy)
+        enemy.move(waypoints)
+        enemy.update_animation()
+        enemy.draw(screen)
+
+
 def game_loop():
     castle = Castle()
     knight = Knight()
+    background_img = Background()
     waypoints = [
         (0, 300), (200, 300), (200, 100), (400, 100), (400, 500),
         (castle.x + castle.width // 2, 500),
@@ -173,9 +218,11 @@ def game_loop():
 
     running = True
     while running:
-        screen.fill(DARK_GREEN)
+
+        background_img.draw()
         map.draw(screen)
         drawGrid()
+        drawPath(screen, waypoints, block_size=1)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -216,6 +263,8 @@ def game_loop():
         if show_ui:
             draw_ui(screen, ui_mouse_x, ui_mouse_y)
 
+
+
         castle.draw()
 
 
@@ -223,6 +272,8 @@ def game_loop():
         if pygame.time.get_ticks() % 5000 < 50:
             new_enemy = Knight()
             enemies.append(new_enemy)
+
+
 
         for enemy in enemies:
             enemy.move(waypoints)
