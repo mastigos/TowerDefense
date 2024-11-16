@@ -82,7 +82,7 @@ class Knight(Enemy):
 
 class BatteringRam(Enemy):
     def __init__(self):
-        super().__init__(health=25, maxHealth=10, damage=40, resistances=[], special="none", speed=1.5, corpseValue=20)
+        super().__init__(health=25, maxHealth=25, damage=40, resistances=[], special="none", speed=1.5, corpseValue=20)
 
 class Cavalry(Enemy):
     def __init__(self):
