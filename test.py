@@ -29,6 +29,9 @@ BLUE = (0, 0, 255)
 # Player resources
 player_gold = 100  # Initialize player's gold for building towers
 
+# Set the gold font
+goldfont = pygame.font.SysFont('Corbel',35)
+
 # Grid
 def drawGrid():
     blockSize = 30  # Grid block size
