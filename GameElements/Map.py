@@ -1,5 +1,6 @@
 import pygame
 from GameElements.Tower import Cannon, Catapult, Ballista, CaltropsDispenser, KnightsBarracks, HolyChapel
+
 class Map:
     def __init__(self, width, height, block_size, waypoints, castle):
         self.width = width
@@ -35,21 +36,34 @@ class Map:
     def set_tile(self, row, col, value):
 
         self.tileMap[row][col] = value
+    def can_afford_tower(self, tower, player_gold):
+        tower_costs = {
+            Cannon: 15,
+            Catapult: 25,
+            Ballista: 40,
+            CaltropsDispenser: 20,
+            KnightsBarracks: 50,
+            HolyChapel: 30
+        }
+        return player_gold >= tower_costs.get(type(tower), float('inf'))
 
-    def build_tower(self, tower, row, col):
-
-        tower_id = self.tower_ids.get(type(tower), 0)
-        self.set_tile(row, col, tower_id)
 
 
-    def build(self, tower, row, col):
+
+    def build(self, tower, row, col, player_gold):
         tower.x = col * self.block_size
         tower.y = row * self.block_size
         self.tileMap[row][col] = tower
 
+        if not self.can_afford_tower(tower, player_gold):
+            print("Not enough gold to build this tower!")
+            return False
 
         tower_id = self.tower_ids.get(type(tower), 0)
         self.set_tile(row, col, tower_id)
+        print(f"Built {type(tower).__name__} at ({row}, {col})!")
+
+        return True
 
     def get_tile_at_mouse(self, mouse_x, mouse_y):
 

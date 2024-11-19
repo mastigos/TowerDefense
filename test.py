@@ -6,7 +6,7 @@ from GameElements.Tower import Cannon, Catapult, Ballista, CaltropsDispenser, Kn
 pygame.init()
 
 # Screen settings
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 780, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Tower Defense")
 
@@ -92,49 +92,42 @@ def drawPath(screen, waypoints, path_image, block_size):
         # Place final tile
         screen.blit(path_image, (end_x, end_y))
 
+
 def display_build_ui(player_gold):
+        font = pygame.font.SysFont("Arial", 24)
 
-    font = pygame.font.SysFont("Arial", 24)
+        ui_width = 200
+        ui_height = 150
+        pygame.draw.rect(screen, (200, 200, 200), (WIDTH - ui_width, 0, ui_width, ui_height))
 
+        tower_data = [
+            ("Cannon", 15, Cannon),
+            ("Catapult", 25, Catapult),
+            ("Ballista", 40, Ballista),
+            ("Caltrops", 20, CaltropsDispenser),
+            ("Knights Barracks", 50, KnightsBarracks),
+            ("Holy Chapel", 30, HolyChapel),
+        ]
 
-    ui_width = 200
-    ui_height = 150
-    pygame.draw.rect(screen, (200, 200, 200), (WIDTH - ui_width, 0, ui_width, ui_height))
+        y_offset = 20
+        selected_tower = None
+        for name, cost, tower_class in tower_data:
+            color = GREEN if cost <= player_gold else RED
+            text = font.render(f"{name}: {cost} Gold", True, color)
+            screen.blit(text, (WIDTH - ui_width + 10, y_offset))
+            y_offset += 30
 
-    tower_data = [
-        ("Cannon", 15),
-        ("Catapult", 25),
-        ("Ballista", 40),
-        ("Caltrops", 20),
-        ("Knights Barracks", 50),
-        ("Holy Chapel", 30),
-    ]
+            if color == GREEN and selected_tower is None:
+                if pygame.mouse.get_pressed()[0]:
+                    if y_offset - 30 < pygame.mouse.get_pos()[1] < y_offset:
+                        selected_tower = tower_class(level=1)
 
-    y_offset = 20
-    selected_tower = None
-    for name, cost in tower_data:
-        color = GREEN if cost <= player_gold else RED
-        text = font.render(f"{name}: {cost} Gold", True, color)
-        screen.blit(text, (WIDTH - ui_width + 10, y_offset))
-        y_offset += 30
+                        # Build the selected tower
+                        row, col = 5, 5  # Replace with actual row, col logic
+                        player_gold = map.build_tower(selected_tower, row, col, player_gold)
 
-        if color == GREEN and selected_tower is None:
-            if pygame.mouse.get_pressed()[0]:
-                if y_offset - 30 < pygame.mouse.get_pos()[1] < y_offset:
-                    if name == "Cannon":
-                        selected_tower = Cannon(level=1)
-                    elif name == "Catapult":
-                        selected_tower = Catapult(level=1)
-                    elif name == "Ballista":
-                        selected_tower = Ballista(level=1)
-                    elif name == "Caltrops":
-                        selected_tower = CaltropsDispenser(level=1)
-                    elif name == "Knights Barracks":
-                        selected_tower = KnightsBarracks(level=1)
-                    elif name == "Holy Chapel":
-                        selected_tower = HolyChapel(level=1)
+        return player_gold
 
-    return selected_tower
 
 def draw_ui(screen, mouse_x, mouse_y):
 
@@ -244,13 +237,10 @@ def game_loop():
     enemies = []
 
     global player_gold
-    goldfont = pygame.font.SysFont('Corbel', 35)
+    goldfont = pygame.font.SysFont('Courier', 30)
 
-    player_gold += 1
-    gold = "Gold: " + str(player_gold)
-    goldtext = goldfont.render(gold , True , (255,255,255))
-    pygame.draw.rect(screen, (0, 0, 0), (20, 20, 90, 30))
-    screen.blit(goldtext , (20,20))
+
+
 
 
     running = True
@@ -259,7 +249,10 @@ def game_loop():
 
         map.draw(screen)
 
+        gold = "Gold: " + str(player_gold)
+        goldtext = goldfont.render(gold, True, (255,215,0))
 
+        screen.blit(goldtext, (20, 20))
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -292,8 +285,17 @@ def game_loop():
                 if selected_tower and selected_tile:
                     row, col = selected_tile
                     if map.tileMap[row][col] == 0:
-                        map.build(selected_tower, row, col)
+                        map.build(selected_tower, row, col, player_gold)
+                        tower_costs = {
+                            Cannon: 15,
+                            Catapult: 25,
+                            Ballista: 40,
+                            CaltropsDispenser: 20,
+                            KnightsBarracks: 50,
+                            HolyChapel: 30
+                        }
                         towers.append(selected_tower)
+                        player_gold -= tower_costs.get(type(selected_tower))
                         selected_tower = None
                         selected_tile = None
 
@@ -328,6 +330,7 @@ def game_loop():
 
             if enemy.health < 1:
                 enemies.remove(enemy)
+                player_gold += enemy.corpseValue
 
             enemy.draw_health_bar(screen)
 

@@ -80,6 +80,9 @@ class Cannon(Tower):
         elif level == 3:
             super().__init__(health=150, cost=40, attack=10, range=100, firerate=1, level=level, x=x, y=y)
 
+    def get_cost(self):
+         return self.cost
+
 class Catapult(Tower):
     def __init__(self, level=1, x=0, y=0):
         if level == 1:
