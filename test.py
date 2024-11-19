@@ -228,7 +228,12 @@ def game_loop():
     towers = []
     enemies = []
 
-
+    global player_gold
+    player_gold += 1
+    gold = "Gold: " + str(player_gold)
+    goldtext = goldfont.render(gold , True , (255,255,255))
+    pygame.draw.rect(screen, (0, 0, 0), (20, 20, 90, 30))
+    screen.blit(goldtext , (20,20))
 
 
     running = True
