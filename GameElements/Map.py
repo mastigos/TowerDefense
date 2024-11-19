@@ -17,7 +17,16 @@ class Map:
             HolyChapel: 6
         }
 
-
+        self.path_image = pygame.transform.scale(pygame.image.load("GameSprites/pathTile80x80.png"), (block_size, block_size))
+        self.grass_image = pygame.transform.scale(pygame.image.load("GameSprites/background.png"), (block_size, block_size))
+        self.tower_images = {
+            1: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (3 * block_size, 3 * block_size)),
+            2: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),
+            3: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),
+            4: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),
+            5: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),
+            6: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),
+        }
         self.set_path_as_unbuildable(waypoints)
 
 
@@ -106,6 +115,23 @@ class Map:
                 x, y = col * self.block_size, row * self.block_size
                 tile_value = self.tileMap[row][col]
 
+                if tile_value == -1:  # Path
+                    screen.blit(self.path_image, (x, y))
+                elif tile_value == 0:  # Grass
+                    screen.blit(self.grass_image, (x, y))
+
+            # THEN THE TOWERS, I AM YOUR GOD
+            for row in range(len(self.tileMap)):
+                for col in range(len(self.tileMap[row])):
+                    tower_id = self.tileMap[row][col]
+                    if tower_id in self.tower_images:
+                        tower_image = self.tower_images[tower_id]
+                        tower_width, tower_height = tower_image.get_size()
+
+                        tower_x = col * self.block_size - (tower_width - self.block_size) // 2
+                        tower_y = row * self.block_size - (tower_height - self.block_size) // 1.5
+
+                        screen.blit(tower_image, (tower_x, tower_y))
                 if tile_value == 1:
                     pygame.draw.rect(screen, (255, 0, 0), (x, y, self.block_size, self.block_size))
                 elif tile_value == 2:

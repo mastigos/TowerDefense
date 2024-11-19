@@ -37,20 +37,6 @@ def drawGrid():
             rect = pygame.Rect(x, y, blockSize, blockSize)
             pygame.draw.rect(screen, BROWN, rect, 1)
 
-class Background:
-    def __init__(self):
-        screen.blit(bg, (0, 0))
-
-        self.x = WIDTH - screen.get_width()
-        self.y = HEIGHT - screen.get_height()  # Snap to grid
-
-        self.original_image = pygame.image.load("GameSprites/background.png").convert_alpha()
-        self.resized_image = pygame.transform.scale(self.original_image, (self.x, self.y))
-
-
-    def draw(self):
-        # background
-        screen.blit(background, (0, 0))
 
 # Castle
 class Castle:
@@ -78,7 +64,7 @@ class Castle:
         pygame.draw.rect(screen, GREEN, (self.x, self.y - 35, (self.shield / 50) * self.width, 10))
 
 
-def drawPath(screen, waypoints, block_size):
+def drawPath(screen, waypoints, path_image, block_size):
     for i in range(len(waypoints) - 1):
         start_x, start_y = waypoints[i]
         end_x, end_y = waypoints[i + 1]
@@ -206,11 +192,37 @@ def start_wave(waves):
     else:
         print (f"you win!")
 
+def start_screen():
+
+    font = pygame.font.SysFont("Arial", 48)
+    sub_font = pygame.font.SysFont("Arial", 24)
+
+
+    screen.blit(bg, (0, 0))
+    title_text = font.render("Tower Defense", True, BLUE)
+    start_text = sub_font.render("Press SPACE to Start", True, BLACK)
+
+
+    title_rect = title_text.get_rect(center=(WIDTH // 2, HEIGHT // 3))
+    start_rect = start_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+
+    screen.blit(title_text, title_rect)
+    screen.blit(start_text, start_rect)
+    pygame.display.flip()
+
+    waiting = True
+    while waiting:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    waiting = False
 
 def game_loop():
     castle = Castle()
     knight = Knight()
-    background_img = Background()
     waypoints = [
         (0, 300), (200, 300), (200, 100), (400, 100), (400, 500),
         (castle.x + castle.width // 2, 500),
@@ -229,6 +241,8 @@ def game_loop():
     enemies = []
 
     global player_gold
+    goldfont = pygame.font.SysFont('Corbel', 35)
+
     player_gold += 1
     gold = "Gold: " + str(player_gold)
     goldtext = goldfont.render(gold , True , (255,255,255))
@@ -239,10 +253,10 @@ def game_loop():
     running = True
     while running:
 
-        background_img.draw()
+
         map.draw(screen)
-        drawGrid()
-        drawPath(screen, waypoints, block_size=1)
+
+
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -326,4 +340,5 @@ def game_loop():
         clock.tick(FPS)
 
     pygame.quit()
+start_screen()
 game_loop()
