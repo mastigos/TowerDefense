@@ -183,21 +183,6 @@ def draw_wave_ui():
     wave_text = font.render(f"Wave: {current_wave}", True, (255, 255, 255))
     screen.blit(wave_text, (button_x + 150, button_y + 10))
 
-def start_wave(waves):
-    waves_len = len(waves)
-    enemies_len = len(waves.get(1))
-    if waves_len != 4:
-        for enemies in waves.values():
-            current_wave = waves.index(enemies)
-            wave_end = enemies_len - current_wave
-            if wave_end != 1:
-                next_wave = current_wave + 1
-                next_wave = current_wave
-                enemies_len = len(waves.get(current_wave))
-                wave_end = enemies_len - current_wave
-    else:
-        print (f"you win!")
-
 def start_screen():
 
     font = pygame.font.SysFont("Arial", 48)
