@@ -142,24 +142,27 @@ def draw_ui(screen, mouse_x, mouse_y):
 
     pygame.draw.rect(screen, (255, 255, 255), (tower_ui_x, tower_ui_y, tower_ui_width, tower_ui_height))
 
-    pygame.draw.rect(screen, (255, 0, 0), (tower_ui_x + 10, tower_ui_y + 10, 180, 30))
-    pygame.draw.rect(screen, (0, 255, 0), (tower_ui_x + 10, tower_ui_y + 40, 180, 30))
-    pygame.draw.rect(screen, (0, 0, 255), (tower_ui_x + 10, tower_ui_y + 70, 180, 30))
+    pygame.draw.rect(screen, (255, 100, 100), (tower_ui_x + 10, tower_ui_y + 10, 180, 30))
+    pygame.draw.rect(screen, (100, 255, 100), (tower_ui_x + 10, tower_ui_y + 40, 180, 30))
+    pygame.draw.rect(screen, (100, 100, 255), (tower_ui_x + 10, tower_ui_y + 70, 180, 30))
 
     font = pygame.font.SysFont(None, 24)
-    font_render = font.render("Cannon", True, (0, 0, 0))
-    screen.blit(font_render, (tower_ui_x + 75, tower_ui_y + 15))
-    font_render = font.render("Catapult", True, (0, 0, 0))
-    screen.blit(font_render, (tower_ui_x + 65, tower_ui_y + 45))
-    font_render = font.render("Ballista", True, (0, 0, 0))
-    screen.blit(font_render, (tower_ui_x + 70, tower_ui_y + 75))
+    font_render = font.render("Cannon - 15", True, (0, 0, 0))
+    screen.blit(font_render, (tower_ui_x + 20, tower_ui_y + 15))
+    font_render = font.render("Catapult - 25", True, (0, 0, 0))
+    screen.blit(font_render, (tower_ui_x + 20, tower_ui_y + 45))
+    font_render = font.render("Ballista - 40", True, (0, 0, 0))
+    screen.blit(font_render, (tower_ui_x + 20, tower_ui_y + 75))
 
 current_wave = 0
 wave_active = False
 waves = {
-    1: [Knight(),],
-    2: [Knight()],
-    3: [Knight()],
+    1: [Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Dragon()],
+    2: [Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon()],
+    3: [Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon()],
+    4: [Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon()],
+    5: [Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Knight(), Knight(), Soldier(), Soldier(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon()],
+    6: [Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon(), Dragon()]
 }
 def all_waves_completed(current_wave, wave_active, enemies):
     if current_wave == len(waves) and not wave_active and not enemies:
