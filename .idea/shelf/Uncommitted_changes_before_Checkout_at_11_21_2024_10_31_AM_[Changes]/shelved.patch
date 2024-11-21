@@ -1,0 +1,81 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9eab3a53-01e3-4fbd-a9de-68b5f719261a\" name=\"Changes\" comment=\"Towers cost gold kinda mostly\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GameElements/Enemy.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GameElements/Enemy.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GameElements/Map.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GameElements/Map.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GameElements/Projectile.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GameElements/Projectile.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GameElements/Tower.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GameElements/Tower.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/test.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/test.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ChangesViewManager\" show_ignored=\"true\" />\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;mastigos&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/mastigos/TowerDefense&quot;,\r\n    &quot;accountId&quot;: &quot;87df98b5-9506-4ebd-8b06-7e7524395330&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 2\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2nt3a2U3qFQ2JbXwrNWEOxYJmG4\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Python.Enemy.executor\": \"Run\",\r\n    \"Python.Map.executor\": \"Run\",\r\n    \"Python.Projectile.executor\": \"Run\",\r\n    \"Python.Tower.executor\": \"Run\",\r\n    \"Python.TowerGame.executor\": \"Run\",\r\n    \"Python.test.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"Collin's-stuff\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"settings.editor.selected.configurable\": \"editor.preferences.completion\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Lynn\\PycharmProjects\\TowerDefense\\GameElements\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9eab3a53-01e3-4fbd-a9de-68b5f719261a\" name=\"Changes\" comment=\"\" />\r\n      <created>1729778604522</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1729778604522</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Added Enemy implementation\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1730212566212</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1730212566212</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Added Enemy implementation\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1730212618581</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1730212618581</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Added Waypoints and pathfinding\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1730992711222</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1730992711222</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Added Waypoints and pathfinding\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731595530934</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731595530934</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Enemy animation stuff\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731720557174</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731720557174</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Got scaling to work\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731721492931</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731721492931</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Got scaling to work\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731724893588</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731724893588</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Got scaling to work\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731724907853</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731724907853</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"fixed enemy attributes to give them all maxhealth\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731725092844</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731725092844</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"fixed enemy attributes to give them all maxhealth\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731725118321</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731725118321</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Got the tile stuff working again\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732029125712</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732029125712</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Towers cost gold kinda mostly\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732031379560</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732031379560</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"13\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Added Enemy implementation\" />\r\n    <MESSAGE value=\"Added Waypoints and pathfinding\" />\r\n    <MESSAGE value=\"Enemy animation stuff\" />\r\n    <MESSAGE value=\"Got scaling to work\" />\r\n    <MESSAGE value=\"fixed enemy attributes to give them all maxhealth\" />\r\n    <MESSAGE value=\"Got the tile stuff working again\" />\r\n    <MESSAGE value=\"Towers cost gold kinda mostly\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Towers cost gold kinda mostly\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 142c521dd65916c83c33e752b64f12e33597cf86)
++++ b/.idea/workspace.xml	(date 1732202902804)
+@@ -4,12 +4,14 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9eab3a53-01e3-4fbd-a9de-68b5f719261a" name="Changes" comment="Towers cost gold kinda mostly">
++    <list default="true" id="9eab3a53-01e3-4fbd-a9de-68b5f719261a" name="Changes" comment="congratulations works now">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/GameElements/Enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Enemy.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GameElements/Map.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Map.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GameElements/Projectile.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Projectile.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GameElements/Tower.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Tower.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking2.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking2.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking3.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking3.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking4.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking4.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking5.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking5.png" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -187,7 +189,39 @@
+       <option name="project" value="LOCAL" />
+       <updated>1732031379560</updated>
+     </task>
+-    <option name="localTasksCounter" value="13" />
++    <task id="LOCAL-00013" summary="Did a lot, comments/code are a little messy">
++      <option name="closed" value="true" />
++      <created>1732174197684</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1732174197685</updated>
++    </task>
++    <task id="LOCAL-00014" summary="catapult/ballista sprite">
++      <option name="closed" value="true" />
++      <created>1732174234446</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1732174234446</updated>
++    </task>
++    <task id="LOCAL-00015" summary="Music">
++      <option name="closed" value="true" />
++      <created>1732199355711</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1732199355711</updated>
++    </task>
++    <task id="LOCAL-00016" summary="congratulations works now">
++      <option name="closed" value="true" />
++      <created>1732200297378</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1732200297378</updated>
++    </task>
++    <option name="localTasksCounter" value="17" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -209,6 +243,10 @@
+     <MESSAGE value="fixed enemy attributes to give them all maxhealth" />
+     <MESSAGE value="Got the tile stuff working again" />
+     <MESSAGE value="Towers cost gold kinda mostly" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Towers cost gold kinda mostly" />
++    <MESSAGE value="Did a lot, comments/code are a little messy" />
++    <MESSAGE value="catapult/ballista sprite" />
++    <MESSAGE value="Music" />
++    <MESSAGE value="congratulations works now" />
++    <option name="LAST_COMMIT_MESSAGE" value="congratulations works now" />
+   </component>
+ </project>
+\ No newline at end of file

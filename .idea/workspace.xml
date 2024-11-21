@@ -5,12 +5,143 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eab3a53-01e3-4fbd-a9de-68b5f719261a" name="Changes" comment="Towers cost gold kinda mostly">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameElements/Enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Enemy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameElements/Map.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameElements/Projectile.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Projectile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameElements/Tower.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Tower.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameElements/TowerGame2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameElements/rangeElement.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush1_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush1_1_berries.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush1_2_berries.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush1_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush1_3_berries.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush2_1_berries.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush2_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush2_2_berries.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush2_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/bush2_3_berries.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/flower_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/flower_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree1_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree1_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree2_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree2_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree2_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree3_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree3_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Bushes and Trees/tree3_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Chest1_closed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Chest1_opened.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Chest2_closed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Chest2_opened.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Plants/plant1_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Plants/plant1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Plants/plant2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Plants/plant2_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Plants/plant2_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Plants/plant2_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Plants/plant3_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Plants/plant3_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Plants/plant3_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Rock_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Rock_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/Rock_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/fountain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/map_pointer_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/map_pointer_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/over_grass_flower1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/over_grass_flower2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/over_grass_flower3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/over_grass_stone1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/over_grass_stone2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/over_grass_stone3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/statue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/statue2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Objects and Static PNG/statue3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back-Right.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back-Right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back-Right2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back-Right3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back-Right4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Back4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front-Left.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front-Left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front-Left2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front-Left3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front-Left4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 50%/General-Death-Front4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back-Right.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back-Right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back-Right2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back-Right3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back-Right4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Back4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front-Left.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front-Left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front-Left2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front-Left3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front-Left4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/SPRITESHEETS - 80%/General-Death-Front4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Back-Walking-Right.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Back-Walking-Right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Back-Walking-Right2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Back-Walking.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Back-Walking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Back-Walking2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Front-Walking-Left.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Front-Walking-Left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Front-Walking-Left2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Front-Walking.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Front-Walking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/Troll_SPRITESHEETS/Troll_Front-Walking2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking-Right.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking-Right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking-Right2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking-Right3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking-Right4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Back-Walking5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking-Left.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking-Left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking-Left2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking-Left3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking-Left4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking-Left5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking-Left6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking-Left7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking-Left8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSprites/UglyOgre_SPRITESHEETS/Ugly Ogre_Front-Walking8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +196,7 @@
     "Python.TowerGame.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Collin's-stuff",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "settings.editor.selected.configurable": "editor.preferences.completion"
   }
