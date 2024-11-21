@@ -157,9 +157,9 @@ def draw_ui(screen, mouse_x, mouse_y):
 current_wave = 0
 wave_active = False
 waves = {
-    1: [Knight(), Knight(), Soldier(), Soldier(),Knight(), Knight(), Soldier(), Soldier(),Knight(), Knight(), Soldier(), Soldier()],
-    2: [Knight(), Soldier(), Soldier(), Dragon()],
-    3: [Knight(), Knight(), Soldier(), Soldier(), Dragon(),Dragon(),Dragon()],
+    1: [Knight(),],
+    2: [Knight()],
+    3: [Knight()],
 }
 def all_waves_completed(current_wave, wave_active, enemies):
     if current_wave == len(waves) and not wave_active and not enemies:
@@ -258,7 +258,8 @@ def congratulations_screen():
     waiting = True
     while waiting:
         for event in pygame.event.get():
-            if event.key == pygame.K_q:
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_q:
                     pygame.quit()
                     exit()
 
@@ -372,6 +373,8 @@ def game_loop():
                             show_ui = False
                         elif ui_mouse_y + 70 <= mouse_y <= ui_mouse_y + 100:
                             selected_tower = Ballista()
+                            show_ui = False
+                        elif ui_mouse_y < mouse_x or ui_mouse_y > mouse_x:
                             show_ui = False
 
                 # Build the selected tower
