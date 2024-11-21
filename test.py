@@ -1,7 +1,9 @@
 import pygame
 from GameElements.Enemy import Knight, Soldier, Dragon
 from GameElements.Map import Map
+from GameElements.Music import Music
 from GameElements.Tower import Cannon, Catapult, Ballista, CaltropsDispenser, KnightsBarracks, HolyChapel
+import GameElements.Music
 
 
 pygame.init()
@@ -269,7 +271,8 @@ def congratulations_screen():
 
 def game_loop():
     castle = Castle()
-
+    music = Music("GameMusic/background.mp3")
+    music.play_music()
 
 
     waypoints = [
@@ -306,6 +309,7 @@ def game_loop():
     projectile_image = pygame.image.load("GameSprites/Cannon Bullets/PNG/Cannon_Ball-animation_0.png")
     projectile_image = pygame.transform.scale(projectile_image, (10, 10))
 
+
     running = True
     while running:
         screen.blit(bg, (0, 0))
@@ -314,7 +318,6 @@ def game_loop():
         if castle.health <= 0:
             game_over_screen()
             return False
-
 
         elif all_waves_completed(current_wave, wave_active, enemies):
             congratulations_screen()
@@ -331,6 +334,9 @@ def game_loop():
             if event.type == pygame.QUIT:
                 running = False
                 break
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_m:  # Toggle mute
+                    music.toggle_pause()
 
 
 
