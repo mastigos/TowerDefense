@@ -65,7 +65,7 @@ class Enemy:
 
 class Knight(Enemy):
     def __init__(self):
-        super().__init__(health=10, maxHealth=10, damage=5, resistances=[], special="none", speed=1, corpseValue=5)
+        super().__init__(health=20, maxHealth=20, damage=5, resistances=[], special="none", speed=2, corpseValue=5)
         frame_paths = [
             "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back.png",
             "GameSprites/Knight_SPRITESHEETS/Knight-and-Horse_Back-Walking-Back2.png",
@@ -82,7 +82,7 @@ class Knight(Enemy):
 
 class BatteringRam(Enemy):
     def __init__(self):
-        super().__init__(health=25, damage=40, resistances=[], special="none", speed=1.5, corpseValue=20)
+        super().__init__(health=25, maxHealth=25, damage=40, resistances=[], special="none", speed=1.5, corpseValue=20)
         frame_paths = [
 
         ]
@@ -91,16 +91,13 @@ class BatteringRam(Enemy):
 
 class Soldier(Enemy):
     def __init__(self):
-        super().__init__(health=5, damage=10, resistances=[], special="none", speed=1, corpseValue=3)
+        super().__init__(health=50, maxHealth=50, damage=10, resistances=[], special="none", speed=1, corpseValue=3)
         frame_paths = [
-            "Dwarf_Front-Walking-Left_0.png",
-            "Dwarf_Front-Walking-Left_1.png",
-            "Dwarf_Front-Walking-Left_2.png",
-            "Dwarf_Front-Walking-Left_3.png",
-            "Dwarf_Front-Walking-Left_4.png",
-            "Dwarf_Front-Walking-Left_5.png",
-            "Dwarf_Front-Walking-Left_6.png",
-            "Dwarf_Front-Walking-Left_7.png",
+            "GameSprites/Soldier/Dwarf_Front-Walking-Left_1.png",
+            "GameSprites/Soldier/Dwarf_Front-Walking-Left_2.png",
+            "GameSprites/Soldier/Dwarf_Front-Walking-Left_3.png",
+            "GameSprites/Soldier/Dwarf_Front-Walking-Left_4.png",
+
         ]
 
         self.load_animation_frames(frame_paths)
@@ -108,16 +105,16 @@ class Soldier(Enemy):
 #bosses--> last thing
 class Dragon(Enemy):
     def __init__(self):
-        super().__init__(health=300, damage=50, resistances=[], special="none", speed=1, corpseValue=150)
+        super().__init__(health=300, maxHealth=300, damage=50, resistances=[], special="none", speed=1.5, corpseValue=150)
         frame_paths = [
-            "Red Dragon_Front-Flying-Left_0.png",
-            "Red Dragon_Front-Flying-Left_1.png",
-            "Red Dragon_Front-Flying-Left_2.png",
-            "Red Dragon_Front-Flying-Left_3.png",
-            "Red Dragon_Front-Flying-Left_4.png",
-            "Red Dragon_Front-Flying-Left_5.png",
-            "Red Dragon_Front-Flying-Left_6.png",
-            "Red Dragon_Front-Flying-Left_7.png"
+            "GameSprites/Skeleton Dragon/Red Dragon_Front-Flying-Left_0.png",
+            "GameSprites/Skeleton Dragon/Red Dragon_Front-Flying-Left_1.png",
+            "GameSprites/Skeleton Dragon/Red Dragon_Front-Flying-Left_2.png",
+            "GameSprites/Skeleton Dragon/Red Dragon_Front-Flying-Left_3.png",
+            "GameSprites/Skeleton Dragon/Red Dragon_Front-Flying-Left_4.png",
+            "GameSprites/Skeleton Dragon/Red Dragon_Front-Flying-Left_5.png",
+            "GameSprites/Skeleton Dragon/Red Dragon_Front-Flying-Left_6.png",
+            "GameSprites/Skeleton Dragon/Red Dragon_Front-Flying-Left_7.png"
         ]
 
         self.load_animation_frames(frame_paths)
@@ -125,4 +122,4 @@ class Dragon(Enemy):
 
 class Giant(Enemy):
     def __init__(self):
-        super().__init__(health=1000, damage=75, resistances=[], special="stomp", speed=0.5, corpseValue=150)
+        super().__init__(health=1000, maxHealth=25, damage=75, resistances=[], special="stomp", speed=0.5, corpseValue=150)

@@ -18,7 +18,7 @@ class Projectile:
         elif self.target.y < self.y:
             self.y -= self.speed
 
-        print(f"Projectile moving to: ({self.x}, {self.y})")
+        #print(f"Projectile moving to: ({self.x}, {self.y})")
 
 
     def check_collision(self):

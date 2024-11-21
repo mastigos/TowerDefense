@@ -23,31 +23,33 @@ class Tower:
                     projectile = Projectile(self.x, self.y, nearest_enemy, self.attack)
                     self.projectiles.append(projectile)
                     self.last_shot_time = current_time
-                    print(f"Firing a projectile at Enemy({nearest_enemy.x}, {nearest_enemy.y}).")
+                    #print(f"Firing a projectile at Enemy({nearest_enemy.x}, {nearest_enemy.y}).")
                 else:
-                    print("No enemies within range.")
+                    pass
+                   # print("No enemies within range.")
             else:
-                print("No nearest enemy found.")
+                #print("No nearest enemy found.")
+                pass
 
         for projectile in self.projectiles[:]:
             projectile.move_towards_target()
             if projectile.check_collision():
                 self.projectiles.remove(projectile)
-                print("Projectile collided and was removed.")
+                #print("Projectile collided and was removed.")
 
     def get_nearest_enemy(self, enemies):
         nearest_enemy = None
-        print(f"Tower range: {self.range}")
+        #print(f"Tower range: {self.range}")
         min_distance = self.range
-        print(f"Tower Position: ({self.x}, {self.y})")
+        #print(f"Tower Position: ({self.x}, {self.y})")
         for enemy in enemies:
-            print(f"Enemy Position: ({enemy.x}, {enemy.y})")
+            #print(f"Enemy Position: ({enemy.x}, {enemy.y})")
 
 
             distance = ((enemy.x - self.x) ** 2 + (enemy.y - self.y) ** 2) ** 0.5
 
 
-            print(f"Checking enemy at ({enemy.x}, {enemy.y}), distance: {distance}")
+            #print(f"Checking enemy at ({enemy.x}, {enemy.y}), distance: {distance}")
 
 
             if distance <= self.range and (nearest_enemy is None or distance < min_distance):
@@ -55,15 +57,17 @@ class Tower:
                 min_distance = distance
 
         if nearest_enemy:
-            print(f"Nearest enemy found at ({nearest_enemy.x}, {nearest_enemy.y})")
+            pass
+            #print(f"Nearest enemy found at ({nearest_enemy.x}, {nearest_enemy.y})")
         else:
-            print("No enemy found within range.")
+            pass
+            #print("No enemy found within range.")
 
         return nearest_enemy
 
     def attack_target(self, target):
         target.health -= self.attack
-        print(f"Attacking {target} for {self.attack} damage. Remaining health: {target.health}")
+       # print(f"Attacking {target} for {self.attack} damage. Remaining health: {target.health}")
 
     def upgrade(self):
         self.level += 1
@@ -74,7 +78,7 @@ class Tower:
 class Cannon(Tower):
     def __init__(self, level=1, x=0, y=0):
         if level == 1:
-            super().__init__(health=100, cost=15, attack=3, range=100, firerate=1, level=level, x=x, y=y)
+            super().__init__(health=100, cost=15, attack=3, range=100, firerate=2, level=level, x=x, y=y)
         elif level == 2:
             super().__init__(health=120, cost=25, attack=5, range=100, firerate=1, level=level, x=x, y=y)
         elif level == 3:
@@ -86,7 +90,7 @@ class Cannon(Tower):
 class Catapult(Tower):
     def __init__(self, level=1, x=0, y=0):
         if level == 1:
-            super().__init__(health=150, cost=25, attack=5, range=150, firerate=2, level=level, x=x, y=y)
+            super().__init__(health=150, cost=25, attack=10, range=150, firerate=.75, level=level, x=x, y=y)
         elif level == 2:
             super().__init__(health=180, cost=40, attack=7, range=150, firerate=2, level=level, x=x, y=y)
         elif level == 3:

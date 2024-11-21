@@ -21,9 +21,9 @@ class Map:
         self.path_image = pygame.transform.scale(pygame.image.load("GameSprites/pathTile80x80.png"), (block_size, block_size))
         self.grass_image = pygame.transform.scale(pygame.image.load("GameSprites/background.png"), (block_size, block_size))
         self.tower_images = {
-            1: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (3 * block_size, 3 * block_size)),
-            2: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),
-            3: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),
+            1: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (2 * block_size, 2 * block_size)),
+            2: pygame.transform.scale(pygame.image.load("GameSprites/Catapult.png"), (1.5*block_size, 1.5*block_size)),
+            3: pygame.transform.scale(pygame.image.load("GameSprites/Ballista.png"), (1.5*block_size, 1.5*block_size)),
             4: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),
             5: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),
             6: pygame.transform.scale(pygame.image.load("GameSprites/cannon_tower_lvl1.png"), (block_size, block_size)),

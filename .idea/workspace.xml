@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eab3a53-01e3-4fbd-a9de-68b5f719261a" name="Changes" comment="Got the tile stuff working again">
+    <list default="true" id="9eab3a53-01e3-4fbd-a9de-68b5f719261a" name="Changes" comment="Towers cost gold kinda mostly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameElements/Enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Enemy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameElements/Map.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameElements/Projectile.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Projectile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameElements/Tower.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameElements/Tower.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
@@ -58,11 +60,13 @@
   "keyToString": {
     "Python.Enemy.executor": "Run",
     "Python.Map.executor": "Run",
+    "Python.Projectile.executor": "Run",
     "Python.Tower.executor": "Run",
     "Python.TowerGame.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Collin's-stuff",
+    "ignore.virus.scanning.warn.message": "true",
     "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
@@ -175,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732029125712</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Towers cost gold kinda mostly">
+      <option name="closed" value="true" />
+      <created>1732031379560</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732031379560</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +208,7 @@
     <MESSAGE value="Got scaling to work" />
     <MESSAGE value="fixed enemy attributes to give them all maxhealth" />
     <MESSAGE value="Got the tile stuff working again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got the tile stuff working again" />
+    <MESSAGE value="Towers cost gold kinda mostly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Towers cost gold kinda mostly" />
   </component>
 </project>
